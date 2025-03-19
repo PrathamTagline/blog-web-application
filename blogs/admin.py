@@ -26,6 +26,5 @@ class LikeAdmin(admin.ModelAdmin):
 
 @admin.register(BlogShare)
 class BlogShareAdmin(admin.ModelAdmin):
-    list_display = ('id', 'shared_by', 'shared_to', 'blog', 'created_at')
-    search_fields = ('shared_by__username', 'shared_to', 'blog__title')
-    list_filter = ('created_at',)
+    list_display = ('id', 'blog', 'shared_by', 'created_at')  # Remove 'shared_to'
+
